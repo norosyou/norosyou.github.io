@@ -1,9 +1,20 @@
-$(".openbtn1").click(function () {//ボタンがクリックされたら
-	$(this).toggleClass('active');//ボタン自身に activeクラスを付与し
-	  $("#g-nav").toggleClass('panelactive');//ナビゲーションにpanelactiveクラスを付与
-  });
-  
-  $("#g-nav a").click(function () {//ナビゲーションのリンクがクリックされたら
-	  $(".openbtn1").removeClass('active');//ボタンの activeクラスを除去し
-	  $("#g-nav").removeClass('panelactive');//ナビゲーションのpanelactiveクラスも除去
-  });
+//ボタンがクリックされたら
+$(".openbtn1").click(
+	function ()
+	{
+		//ボタン自身に activeクラスを付与し
+		$(this).toggleClass('active');
+		//ナビゲーションにpanelactiveクラスを付与
+		$("#g-nav").toggleClass('panelactive');
+	}
+);
+
+//ナビゲーションのリンクがクリックされたら
+$("#g-nav a").click(
+	function () 
+	{
+		//ボタンの activeクラスを除去し
+		$(".openbtn1").removeClass('active');
+		//ナビゲーションのpanelactiveクラスも除去
+		$("#g-nav").removeClass('panelactive');
+});

@@ -1,19 +1,18 @@
 @charset "utf-8";
 
 /*========= ナビゲーションのためのCSS ===============*/
-
 #g-nav{
     /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
     position:fixed;
     z-index: 999;
     /*ナビのスタート位置と形状*/
-  top:0;
+    top:0;
     right: -120%;
-  width:100%;
+    width:50%;
     height: 100vh;/*ナビの高さ*/
-  background:#999;
+    background:#999;
     /*動き*/
-  transition: all 0.6s;
+    transition: all 0.3s;
 }
 
 /*アクティブクラスがついたら位置を0に*/
