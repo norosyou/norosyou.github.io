@@ -8,17 +8,32 @@ $(".openbtn1").click(function () {
 	$(".circle-bg").toggleClass('circleactive');
   });
   
-  //ナビゲーションのリンクがクリックされたら
-  $("#g-nav a").click(function () {
+//ナビゲーションのリンクがクリックされたら
+$("#g-nav a").click(function () {
 	//ボタンの activeクラスを除去し
 	$(".openbtn1").removeClass('active');
 	//ナビゲーションのpanelactiveクラスを除去
 	$("#g-nav").removeClass('panelactive');
 	//丸背景のcircleactiveクラスを除去
 	$(".circle-bg").removeClass('circleactive');
-  });
+});
 
-  // #page-topをクリックした際の設定
+$('#IntroductionBtn').click(function () {
+	const IntroductionTop = $('#Introduction').offset().top;
+	$("html").animate({scrollTop: IntroductionTop});
+});
+
+$('#GameBtn').click(function () {
+	const GameTop = $('#Game').offset().top;
+	$("html").animate({scrollTop: GameTop});
+});
+
+$('#AccountBtn').click(function () {
+	const AccountTop = $('#Account').offset().top;
+	$("html").animate({scrollTop: AccountTop});
+});
+
+// #page-topをクリックした際の設定
 $('#page-top').click(function () {
     $('body,html').animate({
         scrollTop: 0//ページトップまでスクロール

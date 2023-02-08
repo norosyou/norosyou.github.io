@@ -186,7 +186,15 @@ section{
 }
 
 #page-top{
-  text-align: center;
+  text-align: center; 
+  list-style: none;
+  color: #ffff;
+  text-decoration: none;
+  padding:10px;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: bold;
 }
 
 #footer{
