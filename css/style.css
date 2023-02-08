@@ -185,6 +185,10 @@ section{
   background:#242424; 
 }
 
+#page-top{
+  text-align: center;
+}
+
 #footer{
   text-align: center;
   color:#606060;
