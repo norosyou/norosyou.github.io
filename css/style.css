@@ -158,6 +158,14 @@ h2{
   text-align: center;
 }
 
+h3{
+  font-size:1.2rem;
+}
+
+p{
+  margin: 2%;
+}
+
 #header{
   background:#0a0a0a;
   color:#fff;
@@ -172,7 +180,7 @@ main {
 
 section{
   padding: 1% 10% 2%;
-  margin: 10%;
+  margin: 5% 5%;
   color:#ffff;
   background:#242424; 
 }
