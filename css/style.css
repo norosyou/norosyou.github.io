@@ -149,6 +149,10 @@
 
 /*========= レイアウトのためのCSS ===============*/
 
+body{
+  background-color: #000;
+}
+
 h1{
   font-size:1.2rem;
 }
