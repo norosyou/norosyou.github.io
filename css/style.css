@@ -153,23 +153,6 @@ body{
   background-color: #000;
 }
 
-h1{
-  font-size:1.2rem;
-}
-
-h2{
-  font-size:1.2rem;
-  text-align: center;
-}
-
-h3{
-  font-size:1.2rem;
-}
-
-p{
-  margin: 2%;
-}
-
 #header{
   background:#0a0a0a;
   color:#fff;
@@ -189,6 +172,23 @@ section{
   background:#242424; 
 }
 
+h1{
+  font-size: 25px;
+}
+
+h2{
+  font-size:22px;
+  text-align: center;
+}
+
+h3{
+  font-size:18px;
+}
+
+p{
+  font-size:16px;
+}
+
 @media screen and (max-width: 768px) {
   main{
     padding:1%;
@@ -197,6 +197,15 @@ section{
     padding: 2% 1% 2%;
     margin: 5% 1%;
    }
+}
+
+#account-icon{
+  text-align: center; 
+}
+#account-icon a{
+  font-size: 32px;
+  text-decoration: none;
+  color: #ffff;
 }
 
 #page-top{
