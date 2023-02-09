@@ -165,6 +165,17 @@ main {
   background:#1f1f1f;
 }
 
+#IntroductionSelf img {
+  width: 60%;
+  margin: auto;
+  display: block;
+  text-align: center;
+  border-radius: 50%;  /* 角丸半径を50%にする(=円形にする) */
+  width:  180px;       /* ※縦横を同値に */
+  height: 180px;       /* ※縦横を同値に */
+  border: 9px solid #fff;
+}
+
 section{
   padding: 1% 10% 2%;
   margin: 5% 5%;
