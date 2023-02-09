@@ -182,11 +182,22 @@ main {
   background:#1f1f1f;
 }
 
-section{
-  padding: 1% 10% 2%;
-  margin: 5% 5%;
-  color:#ffff;
-  background:#242424; 
+@media screen and (max-width: 768px) {
+  section{
+    padding: 1% 10% 2%;
+    margin: 5% 5%;
+    color:#ffff;
+    background:#242424; 
+  }
+}
+
+@media screen and (max-width: 480px) {
+  section{
+    padding: 1% 5% 2%;
+    margin: 5% 5%;
+    color:#ffff;
+    background:#242424; 
+  }
 }
 
 #page-top{
