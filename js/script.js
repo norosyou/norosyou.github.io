@@ -23,6 +23,11 @@ $('#IntroductionBtn').click(function () {
 	$("html").animate({scrollTop: IntroductionTop});
 });
 
+$('#ProfileBtn').click(function () {
+	const IntroductionTop = $('#Profile').offset().top;
+	$("html").animate({scrollTop: IntroductionTop});
+});
+
 $('#GameBtn').click(function () {
 	const GameTop = $('#Game').offset().top;
 	$("html").animate({scrollTop: GameTop});

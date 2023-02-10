@@ -165,7 +165,7 @@ main {
   background:#1f1f1f;
 }
 
-#IntroductionSelf img {
+#ProfileSelf img {
   width: 60%;
   margin: auto;
   display: block;
@@ -205,7 +205,7 @@ p{
     padding:1%;
   }
   section{
-    padding: 2% 1% 2%;
+    padding: 2% 2% 2%;
     margin: 5% 1%;
    }
 }
