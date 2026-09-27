@@ -1,10 +1,23 @@
 @charset "utf-8";
 
+/*========= カラー変数定義 =========*/
+:root {
+  --bg-main: #f8fafc;        /* 全体背景（わずかに青みを含んだ柔らかい白） */
+  --bg-card: #ffffff;        /* カード・セクション背景（純白） */
+  --bg-header: #ffffff;      /* ヘッダー背景 */
+  --text-main: #1e293b;      /* メイン文字色（濃いグレーで視認性を確保） */
+  --text-sub: #64748b;       /* 補足・サブ文字色 */
+  --accent-primary: #1e293b; /* メインアクセント（鮮やかなブルー） */
+  --accent-cyan: #64748b;    /* サブアクセント（シアン） */
+  --border-color: #e2e8f0;   /* ボーダー・カード境界線 */
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+}
+
 /*========= ナビゲーションのためのCSS ===============*/
 
 /*アクティブになったエリア*/
 #g-nav.panelactive{
-  /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
   position:fixed;
   z-index: 999;
   top: 0;
@@ -16,26 +29,23 @@
 .circle-bg{
   position: fixed;
   z-index:3;
-  /*丸の形*/
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background: #141414;
-  /*丸のスタート位置と形状*/
-  transform: scale(0);/*scaleをはじめは0に*/
+  background: var(--accent-primary); /* ナビ展開時の背景を鮮やかなブルーに変更 */
+  transform: scale(0);
   right:-50px;
-  top:calc(50% - 50px);/*50%から円の半径を引いた値*/
-  transition: all .6s;/*0.6秒かけてアニメーション*/
+  top:calc(50% - 50px);
+  transition: all .6s;
 }
 
 .circle-bg.circleactive{
-  transform: scale(50);/*クラスが付与されたらscaleを拡大*/
+  transform: scale(50);
 }
 
 /*ナビゲーションの縦スクロール*/
 #g-nav-list{
-  display: none;/*はじめは表示なし*/
-  /*ナビの数が増えた場合縦スクロール*/
+  display: none;
   position: fixed;
   z-index: 999; 
   width: 100%;
@@ -45,30 +55,27 @@
 }
 
 #g-nav.panelactive #g-nav-list{
-  display: block; /*クラスが付与されたら出現*/
+  display: block;
 }
 
 /*ナビゲーション*/
 #g-nav ul {
-  opacity: 0;/*はじめは透過0*/
-  /*ナビゲーション天地中央揃え※レイアウトによって調整してください。不必要なら削除*/
+  opacity: 0;
   position: absolute;
   z-index: 999;
   top:50%;
-  left:45%;
+  left:50%;
   transform: translate(-50%,-50%);
 }
 
-/*背景が出現後にナビゲーションを表示*/
 #g-nav.panelactive ul {
   opacity:1;
 }
 
-/* 背景が出現後にナビゲーション li を表示※レイアウトによって調整してください。不必要なら削除*/
 #g-nav.panelactive ul li{
   animation-name:gnaviAnime;
   animation-duration:1s;
-  animation-delay:.2s;/*0.2 秒遅らせて出現*/
+  animation-delay:.2s;
   animation-fill-mode:forwards;
   opacity:0;
 }
@@ -78,34 +85,43 @@
   100% { opacity: 1;}
 }
 
-/*リストのレイアウト設定*/
 #g-nav li{
   text-align: center; 
   list-style: none;
 }
 
 #g-nav li a{
-  color: #ffff;
+  color: #ffffff;
   text-decoration: none;
-  padding:10px;
+  padding:15px;
   display: block;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-weight: bold;
+  font-size: 1.2rem;
+  transition: color 0.2s;
 }
 
-/*========= ボタンのためのCSS ===============*/
+#g-nav li a:hover {
+  color: var(--accent-cyan);
+}
+
+/*========= ハンバーガーボタンのためのCSS ===============*/
 .openbtn1{
   position:fixed;
   top:10px;
   right: 10px;
-  z-index: 9999;/*ボタンを最前面に*/
+  z-index: 9999;
   cursor: pointer;
   width: 50px;
   height:50px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
 }
   
-/*×に変化*/  
 .openbtn1 span{
   display: inline-block;
   transition: all .4s;
@@ -113,20 +129,17 @@
   left: 14px;
   height: 3px;
   border-radius: 2px;
-  background-color: #ffff;
+  background-color: var(--text-main); /* アイコン線をダークカラーに */
   width: 45%;
 }
 
-.openbtn1 span:nth-of-type(1) {
-  top:15px; 
-}
+.openbtn1 span:nth-of-type(1) { top:15px; }
+.openbtn1 span:nth-of-type(2) { top:23px; }
+.openbtn1 span:nth-of-type(3) { top:31px; }
 
-.openbtn1 span:nth-of-type(2) {
-  top:23px;
-}
-
-.openbtn1 span:nth-of-type(3) {
-  top:31px;
+/* 開いた時（×印）は線を白に変更 */
+.openbtn1.active span {
+  background-color: #ffffff;
 }
 
 .openbtn1.active span:nth-of-type(1) {
@@ -136,9 +149,7 @@
     width: 30%;
 }
 
-.openbtn1.active span:nth-of-type(2) {
-  opacity: 0;
-}
+.openbtn1.active span:nth-of-type(2) { opacity: 0; }
 
 .openbtn1.active span:nth-of-type(3){
     top: 30px;
@@ -150,169 +161,186 @@
 /*========= レイアウトのためのCSS ===============*/
 
 body{
-  background-color: #000;
+  background-color: var(--bg-main);
+  color: var(--text-main);
 }
 
 #header{
-  background:#0a0a0a;
-  color:#fff;
+  background: var(--bg-header);
+  color: var(--text-main);
   text-align: center;
-  padding: 20px;
+  padding: 30px 20px;
+  border-bottom: 1px solid var(--border-color);
 }
 
 main {
-  padding:1% 10%;
-  background:#1f1f1f;
+  padding: 2% 10%;
+  background: var(--bg-main);
 }
 
 #ProfileSelf img {
-  width: 60%;
-  margin: auto;
+  margin: 0 auto 1.5rem;
   display: block;
-  text-align: center;
-  border-radius: 50%;  /* 角丸半径を50%にする(=円形にする) */
-  width:  180px;       /* ※縦横を同値に */
-  height: 180px;       /* ※縦横を同値に */
-  border: 9px solid #fff;
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  border: 6px solid var(--accent-primary); /* プロフィール画像をアクセントの青で縁取り */
+  box-shadow: var(--shadow-lg);
+  object-fit: cover;
 }
 
 section{
-  padding: 1% 10% 2%;
-  margin: 5% 5%;
-  color:#ffff;
-  background:#242424; 
+  padding: 3rem 2.5rem;
+  margin: 3rem auto;
+  max-width: 900px;
+  color: var(--text-main);
+  background: var(--bg-card); 
+  border-radius: 16px;       /* 柔らかいカード型の角丸 */
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-lg); /* 上質なシャドウを追加 */
 }
 
-/* ルートの基準フォントサイズを設定（デフォルトは16px） */
+/* ルートの基準フォントサイズ */
 html {
   font-size: 16px;
 }
 
-/* h1: ページのメインタイトルやロゴ */
+/* h1: ページのメインタイトル */
 h1 {
-  font-size: clamp(2.2rem, 5vw, 3.2rem); /* スマホで約35px / PCで最大約51px */
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
   font-weight: 800;
   line-height: 1.2;
+  color: var(--text-main);
 }
 
-/* h2: セクション見出し（PROFILE, GAME, GUIDELINES など） */
+/* h2: セクション見出し */
 h2 {
-  font-size: clamp(1.6rem, 3.5vw, 2.25rem); /* スマホで約25px / PCで最大約36px */
+  font-size: clamp(1.6rem, 3.5vw, 2.25rem);
   text-align: center;
   font-weight: 700;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  letter-spacing: 1px; /* 少し字間を広げると見出しらしくかっこよくなります */
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+  color: var(--accent-primary); /* 見出しをプライマリカラーに */
 }
 
-/* h3: サブ見出し（自己紹介、経歴、禁止事項 など） */
+/* h3: サブ見出し */
 h3 {
-  font-size: 1.25rem; /* 20px */
+  font-size: 1.25rem;
   font-weight: 600;
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+  padding-left: 10px;
+  border-left: 4px solid var(--accent-primary); /* 左側にブルーのワンポイントラインを追加 */
 }
 
 /* 本文 */
 p, li {
-  font-size: 1rem; /* 16px（基準サイズ） */
-  line-height: 1.7; /* 行間を広げると可読性が劇的に上がります */
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text-main);
 }
 
 @media screen and (max-width: 768px) {
   main{
-    padding:1%;
+    padding: 1%;
   }
   section{
-    padding: 2% 2% 2%;
-    margin: 5% 1%;
-   }
+    padding: 2rem 1.2rem;
+    margin: 2rem 0.5rem;
+  }
 }
 
+/* アカウントアイコン */
 #account-icon{
   text-align: center; 
-}
-#account-icon a{
-  padding:0% 0% 10%;
-  font-size: 48px;
-  text-decoration: none;
-  color: #ffff;
+  margin-top: 1.5rem;
 }
 
+#account-icon a{
+  display: inline-block;
+  font-size: 40px;
+  text-decoration: none;
+  color: var(--text-main);
+  transition: all 0.3s ease;
+}
+
+#account-icon a:hover {
+  color: var(--accent-primary);
+  transform: translateY(-4px);
+}
+
+/* 右下固定の Page Top ボタン */
 #page-top{
   position: fixed;
   right: 20px;
   bottom: 20px;
-  z-index: 999; /* 他の要素より前面に表示 */
-    
-/* 見た目のスタイリング */
+  z-index: 999;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 50px;
   height: 50px;
-  background-color: #3b82f6; /* ボタンの背景色 */
-  color: #ffffff;            /* 文字・アイコンの色 */
-  border-radius: 50%;        /* 丸型にする */
+  background-color: var(--accent-primary);
+  color: #ffffff;
+  border-radius: 50%;
   text-decoration: none;
   font-size: 0.8rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
   transition: all 0.3s ease;
 }
 
-/* ホバー時の動き */
 #page-top:hover {
-    background-color: #2563eb;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  background-color: #1d4ed8;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.6);
 }
-
 
 /* 左上固定の言語切替ボタン */
 .lang-switch-container {
-    position: fixed;
-    top: 15px;
-    left: 20px;
-    z-index: 1000; /* ハンバーガーメニューや他要素より上に表示 */
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    background: rgba(0, 0, 0, 0.5); /* 背景を少し暗く半透明にして視認性を確保 */
-    backdrop-filter: blur(8px);       /* すりガラス効果 */
-    padding: 6px 14px;
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    font-family: sans-serif;
-    font-size: 0.85rem;
-    font-weight: bold;
+  position: fixed;
+  top: 15px;
+  left: 20px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.122); /* 白系の半透明 */
+  backdrop-filter: blur(8px);
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  font-family: sans-serif;
+  font-size: 0.85rem;
+  font-weight: bold;
 }
 
-/* 各言語リンク */
 .lang-switch-btn {
-    color: #aaaaaa;
-    text-decoration: none;
-    transition: color 0.2s ease;
+  color: var(--text-sub);
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 .lang-switch-btn:hover {
-    color: #ffffff;
+  color: var(--text-main);
 }
 
-/* 現在選択中の言語のハイライト */
 .lang-switch-btn.active {
-    color: #00f2fe; /* アクセントカラー（青/シアン系） */
-    pointer-events: none; /* 現在の言語はクリック不可に */
+  color: var(--accent-primary);
+  pointer-events: none;
 }
 
-/* 区切り文字「/」 */
 .lang-switch-divider {
-    color: rgba(255, 255, 255, 0.3);
-    font-size: 0.75rem;
+  color: var(--border-color);
+  font-size: 0.75rem;
 }
 
+/* フッター */
 #footer{
   text-align: center;
-  color:#606060;
-  background:#141414;
-  padding:20px;
+  color: var(--text-sub);
+  background: var(--bg-card);
+  border-top: 1px solid var(--border-color);
+  padding: 25px;
 }
