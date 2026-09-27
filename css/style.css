@@ -323,7 +323,7 @@ p, li {
 }
 
 .lang-switch-btn:hover {
-  color: var(--text-main);
+  color:rgba(37, 99, 235, 1);
 }
 
 .lang-switch-btn.active {
