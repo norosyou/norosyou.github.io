@@ -38,6 +38,11 @@ $('#AccountBtn').click(function () {
 	$("html").animate({scrollTop: AccountTop});
 });
 
+$('#GuidelinesBtn').click(function () {
+	const GuidelinesTop = $('#Guidelines').offset().top;
+	$("html").animate({scrollTop: GuidelinesTop});
+});
+
 // #page-topをクリックした際の設定
 $('#page-top').click(function () {
     $('body,html').animate({

@@ -161,7 +161,7 @@ body{
 }
 
 main {
-  padding:1% 20%;
+  padding:1% 10%;
   background:#1f1f1f;
 }
 
@@ -183,21 +183,40 @@ section{
   background:#242424; 
 }
 
-h1{
-  font-size: 25px;
+/* ルートの基準フォントサイズを設定（デフォルトは16px） */
+html {
+  font-size: 16px;
 }
 
-h2{
-  font-size:22px;
+/* h1: ページのメインタイトルやロゴ */
+h1 {
+  font-size: clamp(2.2rem, 5vw, 3.2rem); /* スマホで約35px / PCで最大約51px */
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+/* h2: セクション見出し（PROFILE, GAME, GUIDELINES など） */
+h2 {
+  font-size: clamp(1.6rem, 3.5vw, 2.25rem); /* スマホで約25px / PCで最大約36px */
   text-align: center;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  letter-spacing: 1px; /* 少し字間を広げると見出しらしくかっこよくなります */
 }
 
-h3{
-  font-size:18px;
+/* h3: サブ見出し（自己紹介、経歴、禁止事項 など） */
+h3 {
+  font-size: 1.25rem; /* 20px */
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
-p{
-  font-size:16px;
+/* 本文 */
+p, li {
+  font-size: 1rem; /* 16px（基準サイズ） */
+  line-height: 1.7; /* 行間を広げると可読性が劇的に上がります */
 }
 
 @media screen and (max-width: 768px) {
@@ -221,15 +240,74 @@ p{
 }
 
 #page-top{
-  text-align: center; 
-  list-style: none;
-  color: #ffff;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 999; /* 他の要素より前面に表示 */
+    
+/* 見た目のスタイリング */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: #3b82f6; /* ボタンの背景色 */
+  color: #ffffff;            /* 文字・アイコンの色 */
+  border-radius: 50%;        /* 丸型にする */
   text-decoration: none;
-  padding:10px;
-  display: block;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-weight: bold;
+  font-size: 0.8rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+/* ホバー時の動き */
+#page-top:hover {
+    background-color: #2563eb;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+
+/* 左上固定の言語切替ボタン */
+.lang-switch-container {
+    position: fixed;
+    top: 15px;
+    left: 20px;
+    z-index: 1000; /* ハンバーガーメニューや他要素より上に表示 */
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(0, 0, 0, 0.5); /* 背景を少し暗く半透明にして視認性を確保 */
+    backdrop-filter: blur(8px);       /* すりガラス効果 */
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    font-family: sans-serif;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+/* 各言語リンク */
+.lang-switch-btn {
+    color: #aaaaaa;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.lang-switch-btn:hover {
+    color: #ffffff;
+}
+
+/* 現在選択中の言語のハイライト */
+.lang-switch-btn.active {
+    color: #00f2fe; /* アクセントカラー（青/シアン系） */
+    pointer-events: none; /* 現在の言語はクリック不可に */
+}
+
+/* 区切り文字「/」 */
+.lang-switch-divider {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 0.75rem;
 }
 
 #footer{
