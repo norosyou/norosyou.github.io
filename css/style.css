@@ -278,6 +278,19 @@ p, li {
   transform: translateY(-4px);
 }
 
+
+/* 「私を構成する9つのゲーム」の画像サイズ調整 */
+img[alt="My9Games"] {
+  display: block;             /* 中央寄せ用のブロック要素化 */
+  max-width: 100%;            /* 画面やカードからはみ出さない */
+  width: 100%;                /* 基本は幅いっぱいに拡大 */
+  max-width: 500px;           /* ★PC等でデカくなりすぎないよう上限を指定（お好みで調整） */
+  height: auto;               /* 縦横比（アスペクト比）を維持 */
+  margin: 1.5rem auto;        /* 上下に余白をつけて左右は中央寄せ */
+  border-radius: 12px;        /* 角を少し丸めてモダンに */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* ほんのり影をつけて立体感を出す */
+}
+
 /* 右下固定の Page Top ボタン */
 #page-top{
   position: fixed;
