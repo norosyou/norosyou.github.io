@@ -18,10 +18,6 @@ $("#g-nav a").click(function () {
 	$(".circle-bg").removeClass('circleactive');
 });
 
-$('#IntroductionBtn').click(function () {
-	const IntroductionTop = $('#Introduction').offset().top;
-	$("html").animate({scrollTop: IntroductionTop});
-});
 
 $('#ProfileBtn').click(function () {
 	const IntroductionTop = $('#Profile').offset().top;
