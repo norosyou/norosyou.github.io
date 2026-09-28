@@ -252,6 +252,12 @@ p, li {
     padding: 2rem 1.2rem;
     margin: 2rem 0.5rem;
   }
+  #g-nav li a {
+    /* PC時（1.2rem等）より一回り小さく設定 */
+    font-size: 0.95rem;
+    /* 上下の余白も少し詰めて収まりを良くする */
+    padding: 10px 8px;   
+  }
 }
 
 /* アカウントアイコン */
@@ -346,12 +352,4 @@ p, li {
   background: var(--bg-card);
   border-top: 1px solid var(--border-color);
   padding: 25px;
-}
-
-/* スマホ表示（画面幅768px以下）の時の全画面ナビゲーション文字サイズ調整 */
-@media screen and (max-width: 768px) {
-  #g-nav li a {
-    font-size: 0.95rem;  /* PC時（1.2rem等）より一回り小さく設定 */
-    padding: 10px 8px;   /* 上下の余白も少し詰めて収まりを良くする */
-  }
 }
