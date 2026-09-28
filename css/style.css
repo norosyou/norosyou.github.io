@@ -100,7 +100,7 @@
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.0rem;
   transition: color 0.2s;
 }
 
@@ -251,12 +251,6 @@ p, li {
   section{
     padding: 2rem 1.2rem;
     margin: 2rem 0.5rem;
-  }
-  #g-nav li a {
-    /* PC時（1.2rem等）より一回り小さく設定 */
-    font-size: 0.95rem;
-    /* 上下の余白も少し詰めて収まりを良くする */
-    padding: 10px 8px;   
   }
 }
 
