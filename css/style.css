@@ -102,6 +102,11 @@
   font-weight: bold;
   font-size: 1.2rem;
   transition: color 0.2s;
+  display: flex;             /* アイコンと文字をFlexboxで横並びにする */
+  align-items: center;       /* 垂直方向の中央に揃える */
+  justify-content: center;   /* 水平方向の中央に揃える */
+  gap: 8px;                  /* アイコンと文字の間の余白 */
+  white-space: nowrap;       /* 文字数が多くても絶対 改行させない */
 }
 
 #g-nav li a:hover {
