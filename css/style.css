@@ -136,7 +136,7 @@
   left: 14px;
   height: 3px;
   border-radius: 2px;
-  background-color: var(--text-main); /* アイコン線をダークカラーに */
+  background-color: var(--text-main);
   width: 45%;
 }
 
@@ -144,7 +144,6 @@
 .openbtn1 span:nth-of-type(2) { top:23px; }
 .openbtn1 span:nth-of-type(3) { top:31px; }
 
-/* 開いた時（×印）は線を白に変更 */
 .openbtn1.active span {
   background-color: #ffffff;
 }
@@ -192,10 +191,23 @@ main {
   border-radius: 50%;
   width: 180px;
   height: 180px;
-  border: 6px solid var(--accent-primary); /* プロフィール画像をアクセントの青で縁取り */
+  border: 6px solid var(--accent-primary);
   box-shadow: var(--shadow-lg);
   object-fit: cover;
 }
+
+/* 「私を構成する9つのゲーム」の画像サイズ調整 */
+#My9Games img  {
+  display: block;             /* 中央寄せ用のブロック要素化 */
+  max-width: 100%;            /* 画面やカードからはみ出さない */
+  width: 100%;                /* 基本は幅いっぱいに拡大 */
+  max-width: 500px;           /* ★PC等でデカくなりすぎないよう上限を指定（お好みで調整） */
+  height: auto;               /* 縦横比（アスペクト比）を維持 */
+  margin: 1.5rem auto;        /* 上下に余白をつけて左右は中央寄せ */
+  border-radius: 12px;        /* 角を少し丸めてモダンに */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* ほんのり影をつけて立体感を出す */
+}
+
 
 section{
   padding: 3rem 2.5rem;
@@ -276,19 +288,6 @@ p, li {
 #account-icon a:hover {
   color: var(--accent-primary);
   transform: translateY(-4px);
-}
-
-
-/* 「私を構成する9つのゲーム」の画像サイズ調整 */
-img[alt="My9Games"] {
-  display: block;             /* 中央寄せ用のブロック要素化 */
-  max-width: 100%;            /* 画面やカードからはみ出さない */
-  width: 100%;                /* 基本は幅いっぱいに拡大 */
-  max-width: 500px;           /* ★PC等でデカくなりすぎないよう上限を指定（お好みで調整） */
-  height: auto;               /* 縦横比（アスペクト比）を維持 */
-  margin: 1.5rem auto;        /* 上下に余白をつけて左右は中央寄せ */
-  border-radius: 12px;        /* 角を少し丸めてモダンに */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* ほんのり影をつけて立体感を出す */
 }
 
 /* 右下固定の Page Top ボタン */
