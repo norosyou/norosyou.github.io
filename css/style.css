@@ -2,13 +2,13 @@
 
 /*========= カラー変数定義 =========*/
 :root {
-  --bg-main: #f8fafc;        /* 全体背景（わずかに青みを含んだ柔らかい白） */
-  --bg-card: #ffffff;        /* カード・セクション背景（純白） */
+  --bg-main: #f8fafc;        /* 全体背景 */
+  --bg-card: #ffffff;        /* カード・セクション背景 */
   --bg-header: #ffffff;      /* ヘッダー背景 */
-  --text-main: #1e293b;      /* メイン文字色（濃いグレーで視認性を確保） */
+  --text-main: #1e293b;      /* メイン文字色*/
   --text-sub: #64748b;       /* 補足・サブ文字色 */
-  --accent-primary: #1e293b; /* メインアクセント（鮮やかなブルー） */
-  --accent-cyan: #64748b;    /* サブアクセント（シアン） */
+  --accent-primary: #1e293b; /* メインアクセント */
+  --accent-cyan: #64748b;    /* サブアクセント */
   --border-color: #e2e8f0;   /* ボーダー・カード境界線 */
   --page-top-hover: #2600ff;   
   --lang-switch-btn-hover: #2600ff;
@@ -34,7 +34,7 @@
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background: var(--accent-primary); /* ナビ展開時の背景を鮮やかなブルーに変更 */
+  background: var(--accent-primary);
   transform: scale(0);
   right:-50px;
   top:calc(50% - 50px);
@@ -95,7 +95,7 @@
 #g-nav li a{
   color: #ffffff;
   text-decoration: none;
-  padding:7px;
+  padding:15px;
   display: block;
   text-transform: uppercase;
   letter-spacing: 0.1em;
