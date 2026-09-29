@@ -6,7 +6,7 @@
   --bg-card: #ffffff;        /* カード・セクション背景 */
   --bg-header: #ffffff;      /* ヘッダー背景 */
   --text-main: #1e293b;      /* メイン文字色*/
-  --text-sub: #64748b;       /* 補足・サブ文字色 */
+  --text-sub: #64744b;       /* 補足・サブ文字色 */
   --accent-primary: #1e293b; /* メインアクセント */
   --accent-cyan: #64748b;    /* サブアクセント */
   --border-color: #e2e8f0;   /* ボーダー・カード境界線 */
@@ -347,7 +347,7 @@ p, li {
 }
 
 .lang-switch-btn.active {
-  color: var(--accent-primary);
+  color: var(--text-main);
   pointer-events: none;
 }
 
