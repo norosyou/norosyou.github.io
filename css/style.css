@@ -102,11 +102,11 @@
   font-weight: bold;
   font-size: 1.2rem;
   transition: color 0.2s;
-  display: flex;             /* アイコンと文字をFlexboxで横並びにする */
-  align-items: center;       /* 垂直方向の中央に揃える */
-  justify-content: center;   /* 水平方向の中央に揃える */
-  gap: 8px;                  /* アイコンと文字の間の余白 */
-  white-space: nowrap;       /* 文字数が多くても絶対 改行させない */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  white-space: nowrap;
 }
 
 #g-nav li a:hover {
@@ -192,20 +192,18 @@ main {
   width: 180px;
   height: 180px;
   border: 6px solid var(--accent-primary);
-  box-shadow: var(--shadow-lg);
   object-fit: cover;
 }
 
 /* 「私を構成する9つのゲーム」の画像サイズ調整 */
 #My9Games img  {
-  display: block;             /* 中央寄せ用のブロック要素化 */
-  max-width: 100%;            /* 画面やカードからはみ出さない */
-  width: 100%;                /* 基本は幅いっぱいに拡大 */
-  max-width: 500px;           /* ★PC等でデカくなりすぎないよう上限を指定（お好みで調整） */
-  height: auto;               /* 縦横比（アスペクト比）を維持 */
-  margin: 1.5rem auto;        /* 上下に余白をつけて左右は中央寄せ */
-  border-radius: 12px;        /* 角を少し丸めてモダンに */
-  box-shadow: var(--shadow-lg); /* ほんのり影をつけて立体感を出す */
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  max-width: 500px;
+  height: auto; 
+  margin: 1.5rem auto;
+  border-radius: 12px;
 }
 
 
