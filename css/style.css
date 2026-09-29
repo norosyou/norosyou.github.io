@@ -10,13 +10,13 @@
   --accent-primary: #1e293b; /* メインアクセント */
   --accent-cyan: #64748b;    /* サブアクセント */
   --border-color: #e2e8f0;   /* ボーダー・カード境界線 */
-  --openbtn1-BG:rgba(255, 255, 255, 0.122);
+  --openbtn1-BG: rgba(255, 255, 255, 0.122);
   --lang-switch-BG: rgba(255, 255, 255, 0.122);
-  --page-top-BG:#1e293b;
+  --page-top-BG: #1e293b;
   --page-top-hover-BG: #1e293b;
-  --lang-switch-btn:#ff0000;
-  --lang-switch-btn-active:#0000ff;
-  --lang-switch-divider:#00ff00;
+  --lang-switch-btn: #ff0000;
+  --lang-switch-btn-active: #0000ff;
+  --lang-switch-divider: #00ff00;
   --lang-switch-btn-hover: #2600ff;
   --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
   --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
