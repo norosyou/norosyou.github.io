@@ -5,15 +5,16 @@
   --bg-main: #f8fafc;        /* 全体背景 */
   --bg-card: #ffffff;        /* カード・セクション背景 */
   --bg-header: #ffffff;      /* ヘッダー背景 */
+  --footer-bg: #ffffff;
+  --footer-text: #64744b;
   --text-main: #1e293b;      /* メイン文字色*/
-  --text-sub: #64744b;       /* 補足・サブ文字色 */
   --accent-primary: #1e293b; /* メインアクセント */
   --border-color: #e2e8f0;   /* ボーダー・カード境界線 */
-  --openbtn1-BG: rgba(255, 255, 255, 0.122);
-  --page-top-BG: #1e293b;
-  --page-top-hover-BG: #1e293b;
-  --lang-switch-BG: rgba(255, 255, 255, 0.122);
-  --lang-switch-btn: #64744b;
+  --openbtn1-bg: rgba(255, 255, 255, 0.122);
+  --page-top-bg: #1e293b;
+  --page-top-hover-bg: #1e293b;
+  --lang-switch-bg: rgba(255, 255, 255, 0.122);
+  --lang-switch-btn: #97a77e;
   --lang-switch-btn-active: #1e293b;
   --lang-switch-divider: #64744b;
   --lang-switch-btn-hover: #2600ff;
@@ -127,7 +128,7 @@
   cursor: pointer;
   width: 50px;
   height:50px;
-  background: var(--openbtn1-BG);
+  background: var(--openbtn1-bg);
   backdrop-filter: blur(8px);
   border-radius: 50%;
   border: 1px solid var(--border-color);
@@ -150,7 +151,7 @@
 .openbtn1 span:nth-of-type(3) { top:31px; }
 
 .openbtn1.active span {
-  background-color: var(--openbtn1-BG);
+  background-color: var(--openbtn1-bg);
 }
 
 .openbtn1.active span:nth-of-type(1) {
@@ -304,7 +305,7 @@ p, li {
   justify-content: center;
   width: 50px;
   height: 50px;
-  background-color: var(--page-top-BG);
+  background-color: var(--page-top-bg);
   color: #ffffff;
   border-radius: 50%;
   text-decoration: none;
@@ -314,7 +315,7 @@ p, li {
 }
 
 #page-top:hover {
-  background-color:var(--page-top-hover-BG);
+  background-color:var(--page-top-hover-bg);
   transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(37, 99, 235, 0.6);
 }
@@ -328,7 +329,7 @@ p, li {
   display: flex;
   align-items: center;
   gap: 6px;
-  background: var(--lang-switch-BG);
+  background: var(--lang-switch-bg);
   backdrop-filter: blur(8px);
   padding: 6px 14px;
   border-radius: 20px;
@@ -362,8 +363,8 @@ p, li {
 /* フッター */
 #footer{
   text-align: center;
-  color: var(--text-sub);
-  background: var(--bg-card);
+  color: var(--footer-text);
+  background: var(--footer-bg);
   border-top: 1px solid var(--border-color);
   padding: 25px;
 }
