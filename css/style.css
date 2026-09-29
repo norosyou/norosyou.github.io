@@ -11,6 +11,8 @@
   --accent-primary: #1e293b; /* メインアクセント */
   --border-color: #e2e8f0;   /* ボーダー・カード境界線 */
   --openbtn1-bg: rgba(255, 255, 255, 0.122);
+  --g-nav-li-a: #ffffff;
+  --g-nav-li-a-hover: #2600ff;
   --page-top-bg: #1e293b;
   --page-top-hover-bg: #1e293b;
   --lang-switch-bg: rgba(255, 255, 255, 0.122);
@@ -99,7 +101,7 @@
 }
 
 #g-nav li a{
-  color: #ffffff;
+  color: var(--g-nav-li-a);
   text-decoration: none;
   padding:15px;
   display: block;
@@ -116,7 +118,7 @@
 }
 
 #g-nav li a:hover {
-  color: var(--accent-cyan);
+  color: var(--g-nav-li-a-hover);
 }
 
 /*========= ハンバーガーボタンのためのCSS ===============*/
