@@ -8,13 +8,12 @@
   --text-main: #1e293b;      /* メイン文字色*/
   --text-sub: #64744b;       /* 補足・サブ文字色 */
   --accent-primary: #1e293b; /* メインアクセント */
-  --accent-cyan: #64748b;    /* サブアクセント */
   --border-color: #e2e8f0;   /* ボーダー・カード境界線 */
   --openbtn1-BG: rgba(255, 255, 255, 0.122);
   --lang-switch-BG: rgba(255, 255, 255, 0.122);
   --page-top-BG: #1e293b;
   --page-top-hover-BG: #1e293b;
-  --lang-switch-btn: #323226;
+  --lang-switch-btn: #97aaae;
   --lang-switch-btn-active: #1e293b;
   --lang-switch-divider: #64744b;
   --lang-switch-btn-hover: #2600ff;
