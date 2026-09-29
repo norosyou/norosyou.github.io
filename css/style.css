@@ -12,8 +12,10 @@
   --border-color: #e2e8f0;   /* ボーダー・カード境界線 */
   --openbtn1-BG:rgba(255, 255, 255, 0.122);
   --lang-switch-BG: rgba(255, 255, 255, 0.122);
-  --page-top-BG:rgba(255, 255, 255, 0.122);
+  --page-top-BG:#1e293b
   --page-top-hover-BG: #1e293b;
+  --lang-switch-btn:#64748b;
+  --lang-switch-btn-active:#1e293b:
   --lang-switch-btn-hover: #2600ff;
   --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
   --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
@@ -338,7 +340,7 @@ p, li {
 }
 
 .lang-switch-btn {
-  color: var(--text-sub);
+  color: var(--lang-switch-btn);
   text-decoration: none;
   transition: color 0.2s ease;
 }
@@ -348,7 +350,7 @@ p, li {
 }
 
 .lang-switch-btn.active {
-  color: var(--text-main);
+  color: var(--lang-switch-btn-active);
   pointer-events: none;
 }
 
