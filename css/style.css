@@ -218,9 +218,9 @@ section{
   max-width: 900px;
   color: var(--text-main);
   background: var(--bg-card); 
-  border-radius: 16px;       /* 柔らかいカード型の角丸 */
+  border-radius: 16px;
   border: 1px solid var(--border-color);
-  box-shadow: var(--shadow-lg); /* 上質なシャドウを追加 */
+  box-shadow: var(--shadow-lg);
 }
 
 /* ルートの基準フォントサイズ */
@@ -244,7 +244,7 @@ h1 {
   margin-top: 0.5rem;
   margin-bottom: 2rem;
   letter-spacing: 1px;
-  color: var(--accent-primary); /* 見出しをプライマリカラーに */
+  color: var(--accent-primary);
 }
 
 /* h3: サブ見出し */
@@ -254,7 +254,7 @@ h2 {
   margin-top: 2rem;
   margin-bottom: 0.8rem;
   padding-left: 10px;
-  border-left: 4px solid var(--accent-primary); /* 左側にブルーのワンポイントラインを追加 */
+  border-left: 4px solid var(--accent-primary);
 }
 
 /* 本文 */
