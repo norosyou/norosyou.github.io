@@ -192,7 +192,7 @@ main {
   width: 180px;
   height: 180px;
   border: 6px solid var(--accent-primary);
-  box-shadow: 0 4px 15px var(--shadow-lg);
+  box-shadow: var(--shadow-lg);
   object-fit: cover;
 }
 
@@ -205,7 +205,7 @@ main {
   height: auto;               /* 縦横比（アスペクト比）を維持 */
   margin: 1.5rem auto;        /* 上下に余白をつけて左右は中央寄せ */
   border-radius: 12px;        /* 角を少し丸めてモダンに */
-  box-shadow: 0 4px 15px var(--shadow-lg); /* ほんのり影をつけて立体感を出す */
+  box-shadow: var(--shadow-lg); /* ほんのり影をつけて立体感を出す */
 }
 
 
