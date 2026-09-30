@@ -76,10 +76,9 @@
   position: absolute;
   z-index: 999;
   top:50%;
-  left:50%;
-  transform: translate(-50%,-50%);
   /* アイコンとテキストの間に少し余白を空けているので調整 */
-  margin-right: 6px;
+  left:30%;
+  transform: translate(-50%,-50%);
 }
 
 #g-nav.panelactive ul {
