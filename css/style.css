@@ -29,7 +29,7 @@
 /*アクティブになったエリア*/
 #g-nav.panelactive{
   position:fixed;
-  z-index: 9999;
+  z-index: 999;
   top: 0;
   width:100%;
   height: 100%;
@@ -57,7 +57,7 @@
 #g-nav-list{
   display: none;
   position: fixed;
-  z-index: 9999; 
+  z-index: 999; 
   width: 100%;
   height: 100vh;
   overflow: auto;
@@ -72,7 +72,7 @@
 #g-nav ul {
   opacity: 0;
   position: absolute;
-  z-index: 9999;
+  z-index: 999;
   top:50%;
   left:50%;
   transform: translate(-50%,-50%);
@@ -301,7 +301,7 @@ p, li {
   position: fixed;
   right: 20px;
   bottom: 20px;
-  z-index: 999;
+  z-index: 500;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -327,7 +327,7 @@ p, li {
   position: fixed;
   top: 15px;
   left: 20px;
-  z-index: 1000;
+  z-index: 500;
   display: flex;
   align-items: center;
   gap: 6px;
