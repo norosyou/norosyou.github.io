@@ -78,6 +78,8 @@
   top:50%;
   left:50%;
   transform: translate(-50%,-50%);
+  /* アイコンとテキストの間に少し余白を空けているので調整 */
+  margin-right: 6px;
 }
 
 #g-nav.panelactive ul {
@@ -117,8 +119,6 @@
   justify-content: center;
   gap: 8px;
   white-space: nowrap;
-  /* アイコンとテキストの間に少し余白を空けているので調整 */
-  margin-right: 6px;
 }
 
 #g-nav li a:hover {
