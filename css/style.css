@@ -80,6 +80,11 @@
   top:50%;
   left:50%;
   transform: translate(-50%,-50%);
+  margin: 0;           /* デフォルトの外側余白を消す */
+  padding: 0;          /* デフォルトの左側余白(約40px)を完全に消す */
+  list-style: none;    /* リストマークを消す */
+  text-align: center;  /* 中のリスト項目を中央揃えにする */
+  width: max-content;  /* 中身の幅にぴったり合わせる
 }
 
 #g-nav.panelactive ul {
