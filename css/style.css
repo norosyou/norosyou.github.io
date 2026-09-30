@@ -70,13 +70,6 @@
   display: block;
 }
 
-/*ナビゲーション*/
-#g-nav {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-}
-
 #g-nav ul {
   opacity: 0;
   position: absolute;
