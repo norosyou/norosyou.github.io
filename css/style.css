@@ -71,13 +71,18 @@
 }
 
 /*ナビゲーション*/
+#g-nav {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
 #g-nav ul {
   opacity: 0;
   position: absolute;
   z-index: 999;
   top:50%;
-  /* アイコンとテキストの間に少し余白を空けているので調整 */
-  left:30%;
+  left:50%;
   transform: translate(-50%,-50%);
 }
 
