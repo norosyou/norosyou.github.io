@@ -27,6 +27,9 @@
 }
 
 /*========= ナビゲーションのためのCSS ===============*/
+#g-nav {
+  position: relative;
+}
 
 /*アクティブになったエリア*/
 #g-nav.panelactive{
