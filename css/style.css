@@ -38,7 +38,7 @@
 /*丸の拡大*/
 .circle-bg{
   position: fixed;
-  z-index:3;
+  z-index:600;
   width: 100px;
   height: 100px;
   border-radius: 50%;
