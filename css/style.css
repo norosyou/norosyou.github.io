@@ -153,6 +153,7 @@
 .openbtn1 span:nth-of-type(3) { top:31px; }
 
 .openbtn1.active span {
+　color: #ffffff;
   background-color: var(--openbtn1-bg);
 }
 
