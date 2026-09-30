@@ -11,6 +11,8 @@
   --accent-primary: #1e293b; /* メインアクセント */
   --border-color: #e2e8f0;   /* ボーダー・カード境界線 */
   --openbtn1-bg: rgba(255, 255, 255, 0.122);
+  --openbtn1: #1e293b;
+  --openbtn1-active: #ffffff;
   --g-nav-li-a: #ffffff;
   --g-nav-li-a-hover: #2600ff;
   --page-top-bg: #1e293b;
@@ -145,7 +147,7 @@
   height: 3px;
   border-radius: 2px;
   width: 45%;
-  background-color: #ff0000;
+  background-color: var(--openbtn1);
 }
 
 .openbtn1 span:nth-of-type(1) { top:15px; }
@@ -153,7 +155,7 @@
 .openbtn1 span:nth-of-type(3) { top:31px; }
 
 .openbtn1.active span {
- background-color: #00ff00;
+ background-color: var(--openbtn1-active);
 }
 
 .openbtn1.active span:nth-of-type(1) {
