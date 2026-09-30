@@ -313,14 +313,14 @@ p, li {
   border-radius: 50%;
   text-decoration: none;
   font-size: 0.8rem;
-  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
+  box-shadow: var(--shadow-sm);
   transition: all 0.3s ease;
 }
 
 #page-top:hover {
   background-color:var(--page-top-hover-bg);
   transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.6);
+  box-shadow: var(--shadow-sm);
 }
 
 /* 左上固定の言語切替ボタン */
