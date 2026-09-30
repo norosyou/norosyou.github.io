@@ -42,8 +42,7 @@
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  color: #ffffff;
-  background: var(--accent-primary);
+  background-color: var(--accent-primary);
   transform: scale(0);
   right:-50px;
   top:calc(50% - 50px);
