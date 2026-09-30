@@ -29,7 +29,7 @@
 /*アクティブになったエリア*/
 #g-nav.panelactive{
   position:fixed;
-  z-index: 999;
+  z-index: 700;
   top: 0;
   width:100%;
   height: 100%;
@@ -126,7 +126,7 @@
   position:fixed;
   top:10px;
   right: 10px;
-  z-index: 999;
+  z-index: 1000;
   cursor: pointer;
   width: 50px;
   height:50px;
@@ -145,7 +145,7 @@
   height: 3px;
   border-radius: 2px;
   width: 45%;
-  background-color: var(--text-main);
+  background-color: #ff0000;
 }
 
 .openbtn1 span:nth-of-type(1) { top:15px; }
