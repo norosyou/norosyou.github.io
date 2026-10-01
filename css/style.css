@@ -372,3 +372,15 @@ p, li {
   border-top: 1px solid var(--border-color);
   padding: 25px;
 }
+
+/* 背景キャンバスの固定設定 */
+#bg-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;          /* 背景に配置 */
+  pointer-events: none;  /* クリックを邪魔しない */
+}
+
