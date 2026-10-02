@@ -288,7 +288,7 @@ p {
   line-height: 1.8;
   color: var(--text-main);
   margin-top: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
 }
 
 /* 最後の p タグの下余白を消して親要素との隙間を防ぐ */
