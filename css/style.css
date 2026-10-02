@@ -6,7 +6,7 @@
   --bg-card: #ffffff;        /* カード・セクション背景 */
   --bg-header: #ffffff;      /* ヘッダー背景 */
   --footer-bg: #ffffff;
-  --footer-text: #64744b;
+  --footer-text: #a9a9a9;
   --text-main: #1e293b;      /* メイン文字色*/
   --accent-primary: #1e293b; /* メインアクセント */
   --border-color: #e2e8f0;   /* ボーダー・カード境界線 */
@@ -18,7 +18,7 @@
   --page-top-bg: #1e293b;
   --page-top-hover-bg: #1e293b;
   --lang-switch-bg: rgba(255, 255, 255, 0.122);
-  --lang-switch-btn: #a9b99f;
+  --lang-switch-btn: #a9a9a9;
   --lang-switch-btn-active: #1e293b;
   --lang-switch-divider: #64744b;
   --lang-switch-btn-hover: #0088ff;
