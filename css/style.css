@@ -14,14 +14,14 @@
   --openbtn1: #1e293b;
   --openbtn1-active: #ffffff;
   --g-nav-li-a: #ffffff;
-  --g-nav-li-a-hover: #2600ff;
+  --g-nav-li-a-hover: #0088ff;
   --page-top-bg: #1e293b;
   --page-top-hover-bg: #1e293b;
   --lang-switch-bg: rgba(255, 255, 255, 0.122);
   --lang-switch-btn: #a9b99f;
   --lang-switch-btn-active: #1e293b;
   --lang-switch-divider: #64744b;
-  --lang-switch-btn-hover: #2600ff;
+  --lang-switch-btn-hover: #0088ff;
   --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
   --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
 }
@@ -110,13 +110,14 @@
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   transition: color 0.2s;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
   white-space: nowrap;
+
 }
 
 #g-nav li a:hover {
@@ -137,6 +138,7 @@
   border-radius: 50%;
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-sm);
+  transition: transform 0.3s ease; 
 }
   
 .openbtn1 span{
@@ -148,6 +150,10 @@
   border-radius: 2px;
   width: 45%;
   background-color: var(--openbtn1);
+}
+
+.openbtn1:hover {
+  transform: translateY(-3px);
 }
 
 .openbtn1 span:nth-of-type(1) { top:15px; }
@@ -191,7 +197,7 @@ body{
 }
 
 main {
-  padding: 2% 10%;
+  padding: 2% 20%;
   background: var(--bg-main);
 }
 
