@@ -277,10 +277,23 @@ h2 {
 }
 
 /* 本文 */
-p, li {
+li {
   font-size: 1rem;
   line-height: 1.8;
   color: var(--text-main);
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text-main);
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+/* 最後の p タグの下余白を消して親要素との隙間を防ぐ */
+p:last-child {
+  margin-bottom: 0;
 }
 
 @media screen and (max-width: 768px) {
