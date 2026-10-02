@@ -293,7 +293,7 @@ p, li {
 
 #account-icon a{
   display: inline-block;
-  font-size: 40px;
+  font-size: 60px;
   text-decoration: none;
   color: var(--text-main);
   transition: all 0.3s ease;
