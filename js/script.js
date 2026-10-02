@@ -47,6 +47,23 @@ $('#page-top').click(function () {
     return false;//リンク自体の無効化
 });
 
+
+// ページ読み込み時にスクロール位置を復元
+window.addEventListener('DOMContentLoaded', () => {
+  const savedScrollPosition = sessionStorage.getItem('scrollPosition');
+  if (savedScrollPosition !== null) {
+    window.scrollTo(0, parseInt(savedScrollPosition, 10));
+    sessionStorage.removeItem('scrollPosition'); // 復元後に消去
+  }
+});
+
+// EN / JA 言語切替ボタンをクリックした時に現在のスクロール位置を保存
+document.querySelectorAll('.lang-switch-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    sessionStorage.setItem('scrollPosition', window.scrollY);
+  });
+});
+
 /*========= 3色（赤・黄・青）のスクロール追従パーティクル ===============*/
 window.addEventListener('DOMContentLoaded', () => {
   const canvas = document.getElementById('bg-canvas');
