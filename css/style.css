@@ -186,21 +186,23 @@ body{
   position: relative;
   background-color: var(--bg-main);
   color: var(--text-main);
-  
+  margin: 0;
+  padding: 0;
 }
 
 #header{
+  border-bottom: 1px solid var(--border-color);
   background: var(--bg-header);
   color: var(--text-main);
   text-align: center;
-  padding: 30px 20px;
-  border-bottom: 1px solid var(--border-color);
+  padding: 40px 30px;
   position: relative;
   z-index: 10;
+  margin: 0;
 }
 
 main {
-  padding: 2% 20%;
+  padding: 1% 20%;
   background: var(--bg-main);
   z-index: 2;
 }
@@ -228,8 +230,8 @@ main {
 
 
 section{
-  padding: 3rem 2.5rem;
-  margin: 3rem auto;
+  padding: 2rem 2.5rem;
+  margin: 2rem auto;
   max-width: 900px;
   color: var(--text-main);
   background: var(--bg-card); 
