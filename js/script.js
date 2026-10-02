@@ -39,6 +39,11 @@ $('#GuidelinesBtn').click(function () {
 	$("html").animate({scrollTop: GuidelinesTop});
 });
 
+$('#ContactBtn').click(function () {
+	const ContactTop = $('#Contact').offset().top;
+	$("html").animate({scrollTop: ContactTop});
+});
+
 // #page-topをクリックした際の設定
 $('#page-top').click(function () {
     $('body,html').animate({

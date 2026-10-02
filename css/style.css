@@ -354,6 +354,39 @@ p:last-child {
   align-items: center;
 }
 
+/* CONTACTセクションの中央揃え */
+.contact-title {
+  margin-bottom: 1rem;
+}
+
+#contact-text p {
+  text-align: center;
+}
+/* ボタンラッパーとボタンの配置調整 */
+.contact-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem;
+}
+
+.contact-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: var(--text-main, #18181b);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.contact-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-sm);
+  opacity: 0.9;
+}
+
 /* 右下固定の Page Top ボタン */
 #page-top{
   position: fixed;
