@@ -297,17 +297,25 @@ p:last-child {
     margin: 2rem 0.5rem;
   }
 }
-
-/* アカウントアイコン */
-#account-icon{
-  text-align: center; 
+/* アカウントアイコン全体の設定 */
+.account-title {
+  margin-bottom: 0rem;
 }
 
-#account-icon a{
-  display: inline-block;
-  font-size: 60px;
-  margin-right: 1rem;
-  margin-left: 1rem;
+#account-icon {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+}
+
+#account-icon a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
   color: var(--text-main);
   transition: all 0.3s ease;
@@ -316,6 +324,21 @@ p:last-child {
 #account-icon a:hover {
   color: var(--accent-primary);
   transform: translateY(-4px);
+}
+
+/* ★ 1. note画像の設定（ここで大きさを指定） */
+#account-icon .note-icon {
+  height: 150px;
+  width: auto;
+  display: block;
+}
+
+/* ★ 2. Font Awesomeアイコン（Xなど）の設定 */
+#account-icon a i {
+  font-size: 50px;        /* ★ note画像と同じ大きさ（高さをあわせる）を指定 */
+  line-height: 1;
+  display: flex;
+  align-items: center;
 }
 
 /* 右下固定の Page Top ボタン */
