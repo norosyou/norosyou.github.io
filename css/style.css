@@ -208,13 +208,14 @@ main {
 }
 
 #ProfileSelf img {
-  margin: 0;
   display: block;
   border-radius: 50%;
   width: 180px;
   height: 180px;
   border: 6px solid var(--accent-primary);
   object-fit: cover;
+  margin: 0 auto;
+  padding: 0;
 }
 
 /* 「私を構成する9つのゲーム」の画像サイズ調整 */
@@ -224,13 +225,14 @@ main {
   width: 100%;
   max-width: 500px;
   height: auto; 
-  margin: 0;
+  margin: 0 auto;
+  padding: 0;
 }
 
 
 section{
-  padding: 2rem 2.5rem;
-  margin: 1rem auto;
+  padding: 1rem 2.5rem;
+  margin: 2rem auto;
   max-width: 900px;
   color: var(--text-main);
   background: var(--bg-card); 
@@ -246,31 +248,20 @@ html {
   font-size: 16px;
 }
 
-/* h1: ページのメインタイトル */
-h {
-  font-size: clamp(2.2rem, 5vw, 3.2rem);
-  font-weight: 800;
-  line-height: 1.2;
-  color: var(--text-main);
-}
-
-/* h2: セクション見出し */
+/* h1: セクションのメインタイトル */
 h1 {
   font-size: clamp(1.6rem, 3.5vw, 2.25rem);
   text-align: center;
   font-weight: 700;
-  margin-top: 0.5rem;
-  margin-bottom: 2rem;
-  letter-spacing: 1px;
+  margin-bottom: 3rem;
   color: var(--accent-primary);
 }
 
-/* h3: サブ見出し */
+/* h2: サブ見出し */
 h2 {
   font-size: 1.25rem;
   font-weight: 600;
-  margin-top: 2rem;
-  margin-bottom: 0.8rem;
+  margin: 1rem;
   padding-left: 10px;
   border-left: 4px solid var(--accent-primary);
 }
@@ -280,19 +271,21 @@ li {
   font-size: 1rem;
   line-height: 1.8;
   color: var(--text-main);
+  margin: 0rem 1rem;
+  padding: 0;
 }
 
 p {
   font-size: 1rem;
   line-height: 1.8;
   color: var(--text-main);
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0rem 2rem;
+  padding: 0;
 }
 
 /* 最後の p タグの下余白を消して親要素との隙間を防ぐ */
 p:last-child {
-  margin-bottom: 0;
+  margin-bottom: 2rem;
 }
 
 @media screen and (max-width: 768px) {
