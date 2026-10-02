@@ -74,7 +74,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // ★ パラメータ調整
   // ==========================================
   const CONFIG = {
-    count: 25,          // 玉の数
+    count: 35,          // 玉の数
     minRadius: 20,       // 最小のサイズ (px)
     maxRadius: 60,      // 最大のサイズ (px)
     speed: 0.2,         // 動くスピード
@@ -113,7 +113,7 @@ window.addEventListener('DOMContentLoaded', () => {
       vy: (Math.random() - 0.5) * CONFIG.speed,
       // CONFIG.minRadius 〜 CONFIG.maxRadius の間でランダムな大きさに指定
       radius: Math.random() * (CONFIG.maxRadius - CONFIG.minRadius) + CONFIG.minRadius,
-      color: colors[Math.floor(Math.random() * colors.length)]
+      color: colors[i % colors.length]
     });
   }
 
