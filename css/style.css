@@ -23,7 +23,7 @@
   --lang-switch-divider: #64744b;
   --lang-switch-btn-hover: #0088ff;
   --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
-  --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.25), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
 }
 
 /*========= ナビゲーションのためのCSS ===============*/
@@ -183,6 +183,7 @@
 /*========= レイアウトのためのCSS ===============*/
 
 body{
+  position: relative;
   background-color: var(--bg-main);
   color: var(--text-main);
   
@@ -389,7 +390,7 @@ p, li {
 
 /* 背景パーティクル */
 #bg-canvas {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
