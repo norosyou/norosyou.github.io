@@ -195,7 +195,7 @@ body{
   background: var(--bg-header);
   color: var(--text-main);
   text-align: center;
-  padding: 40px 30px;
+  padding: 35px;
   position: relative;
   z-index: 10;
   margin: 0;
@@ -385,7 +385,7 @@ p, li {
   color: var(--footer-text);
   background: var(--footer-bg);
   border-top: 1px solid var(--border-color);
-  padding: 25px;
+  padding: 35px;
   position: relative;
   z-index: 10;
 }
