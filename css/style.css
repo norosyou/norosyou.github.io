@@ -224,8 +224,7 @@ main {
   width: 100%;
   max-width: 500px;
   height: auto; 
-  margin: 0.5rem auto;
-  border-radius: 12px;
+  margin: 0;
 }
 
 
