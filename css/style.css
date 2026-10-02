@@ -339,16 +339,16 @@ p:last-child {
   transform: translateY(-4px);
 }
 
-/* ★ 1. note画像の設定（ここで大きさを指定） */
+/* note画像の設定 */
 #account-icon .note-icon {
-  height: 150px;
+  height: 100px;
   width: auto;
   display: block;
 }
 
-/* ★ 2. Font Awesomeアイコン（Xなど）の設定 */
+/* Font Awesomeアイコン（Xなど）の設定 */
 #account-icon a i {
-  font-size: 50px;        /* ★ note画像と同じ大きさ（高さをあわせる）を指定 */
+  font-size: 50px;
   line-height: 1;
   display: flex;
   align-items: center;
