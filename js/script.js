@@ -47,21 +47,46 @@ $('#page-top').click(function () {
     return false;//リンク自体の無効化
 });
 
-
-// ページ読み込み時にスクロール位置を復元
+/*========= 言語切り替え時のスクロール位置の保存・復元（スマホ対応版） ===============*/
+// 1. ページ読み込み時に復元
 window.addEventListener('DOMContentLoaded', () => {
   const savedScrollPosition = sessionStorage.getItem('scrollPosition');
+  
   if (savedScrollPosition !== null) {
-    window.scrollTo(0, parseInt(savedScrollPosition, 10));
-    sessionStorage.removeItem('scrollPosition'); // 復元後に消去
+    const scrollY = parseInt(savedScrollPosition, 10);
+    // iOS Safari対策: 少しだけ遅延させてレンダリング完了後にスクロールを実行
+    setTimeout(() => {
+      window.scrollTo(0, scrollY);
+      sessionStorage.removeItem('scrollPosition');
+    }, 10);
   }
 });
 
-// EN / JA 言語切替ボタンをクリックした時に現在のスクロール位置を保存
-document.querySelectorAll('.lang-switch-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
+// スクロール位置を保存する処理
+function saveScrollPos() {
+  // 0より大きい場合のみ保存（画面一番上への誤上書きを防ぐ）
+  if (window.scrollY > 0) {
     sessionStorage.setItem('scrollPosition', window.scrollY);
-  });
+  }
+}
+
+// 2. スマホ（touchstart）とPC（click）の両方で位置を記憶
+document.addEventListener('touchstart', (e) => {
+  if (e.target.closest('.lang-switch-btn')) saveScrollPos();
+}, { passive: true });
+
+document.addEventListener('click', (e) => {
+  if (e.target.closest('.lang-switch-btn')) saveScrollPos();
+});
+
+// 3. ページを離れる直前（遷移時）にも念のため保存
+window.addEventListener('pagehide', () => {
+  // クリック直後に保存が漏れてもここでバックアップ
+  const isLangClick = sessionStorage.getItem('langButtonClicked');
+  if (isLangClick) {
+    saveScrollPos();
+    sessionStorage.removeItem('langButtonClicked');
+  }
 });
 
 /*========= 3色（赤・黄・青）のスクロール追従パーティクル ===============*/
