@@ -359,27 +359,20 @@ p:last-child {
   margin-bottom: 1rem;
 }
 
-#contact-text p {
-  text-align: center;
-}
-
 /*========= CONTACT フォーム埋め込み用CSS ===============*/
 .google-form-wrapper {
   position: relative;
   width: 100%;
   max-width: 680px;
-  margin: 1.5rem auto 0;
   border-radius: 12px;
   overflow: hidden;
-  border: 1px solid var(--border-color);
-  box-shadow: var(--shadow-sm);
   background-color: #ffffff;
 }
 
 .google-form-wrapper iframe {
   display: block;
   width: 100%;
-  min-height: 750px; /* フォームの項目数に合わせてスクロールが出ない高さに調整してください */
+  height: 1250px; /* フォームの項目数に合わせてスクロールが出ない高さに調整 */
   border: none;
 }
 
