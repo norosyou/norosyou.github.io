@@ -310,7 +310,7 @@ p:last-child {
     margin: 2rem 0.5rem;
   }
 .google-form-wrapper iframe {
-    height: 1400px; /* フォームの項目数に合わせてスクロールが出ない高さに調整 */
+    height: 1500px; /* フォームの項目数に合わせてスクロールが出ない高さに調整 */
   }
 }
 
