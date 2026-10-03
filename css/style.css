@@ -26,7 +26,21 @@
   --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.25), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
 }
 
-/*========= ナビゲーションのためのCSS ===============*/
+/*============= スマホ対応 ===============*/
+@media screen and (max-width: 768px) {
+  main{
+    padding: 1%;
+  }
+  section{
+    padding: 1rem 1.2rem;
+    margin: 2rem 0.5rem;
+  }
+.google-form-wrapper iframe {
+    height: 1600px; /* フォームの項目数に合わせてスクロールが出ない高さに調整 */
+  }
+}
+ 
+/*============= ナビゲーション ===============*/
 /*アクティブになったエリア*/
 #g-nav.panelactive{
   position:fixed;
@@ -124,7 +138,7 @@
   color: var(--g-nav-li-a-hover);
 }
 
-/*========= ハンバーガーボタンのためのCSS ===============*/
+/*============= 右上のハンバーガーボタン ===============*/
 .openbtn1{
   position:fixed;
   top:10px;
@@ -180,7 +194,7 @@
     width: 30%;
 }
 
-/*========= レイアウトのためのCSS ===============*/
+/*============= レイアウト ===============*/
 
 body{
   position: relative;
@@ -301,20 +315,7 @@ p:last-child {
   margin-bottom: 2rem;
 }
 
-@media screen and (max-width: 768px) {
-  main{
-    padding: 1%;
-  }
-  section{
-    padding: 1rem 1.2rem;
-    margin: 2rem 0.5rem;
-  }
-.google-form-wrapper iframe {
-    height: 1500px; /* フォームの項目数に合わせてスクロールが出ない高さに調整 */
-  }
-}
-
-/*========= GAME ===============*/
+/*=========゜=== GAME ===============*/
 /* アカウントアイコン全体の設定 */
 .game-title {
   margin-bottom: 2rem;
@@ -356,7 +357,7 @@ p:last-child {
   border-color: transparent;     /* 枠線の色は変えない */
 }
 
-/*========= モーダル（詳細ポップアップ） ===============*/
+/*============= モーダル（詳細ポップアップ） ===============*/
 
 .game-modal {
   display: none; /* 初期状態は非表示 */
@@ -473,7 +474,7 @@ p:last-child {
   to { opacity: 1; transform: scale(1); }
 }
 
-/*========= ACCOUNT ===============*/
+/*============= ACCOUNT ===============*/
 .account-title {
   margin-bottom: 0rem;
 }
@@ -517,7 +518,7 @@ p:last-child {
   align-items: center;
 }
 
-/*========= CONTACT ===============*/
+/*============= CONTACT ===============*/
 #contact-section {
   padding: 1rem 0rem;
 }
@@ -543,7 +544,7 @@ p:last-child {
   padding: 0;
 }
 
-/* 右下固定の Page Top ボタン */
+/*============= 右下固定の Page Top ボタン ===============*/
 #page-top{
   position: fixed;
   right: 20px;
@@ -569,7 +570,8 @@ p:last-child {
   box-shadow: var(--shadow-sm);
 }
 
-/* 左上固定の言語切替ボタン */
+/*============= 左上固定の言語切替ボタン ===============*/
+
 .lang-switch-container {
   position: fixed;
   top: 15px;
@@ -609,7 +611,7 @@ p:last-child {
   font-size: 0.75rem;
 }
 
-/* フッター */
+/*============= フッター ===============*/
 #footer{
   text-align: center;
   color: var(--footer-text);
@@ -620,7 +622,7 @@ p:last-child {
   z-index: 10;
 }
 
-/* 背景パーティクル */
+/*============= 背景パーティクル ===============*/
 #bg-canvas {
   position: absolute;
   top: 0;
