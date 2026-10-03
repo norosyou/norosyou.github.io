@@ -313,10 +313,170 @@ p:last-child {
     /* 90% に縮小 */
     transform: scale(0.9);
     transform-origin: top center;
-    height: 1350px; /* フォームの項目数に合わせてスクロールが出ない高さに調整 */
+    height: 1400px; /* フォームの項目数に合わせてスクロールが出ない高さに調整 */
   }
 }
+
+/*========= GAME ===============*/
 /* アカウントアイコン全体の設定 */
+.game-title {
+  margin-bottom: 2rem;
+}
+.game-thumb-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* ボタン（サムネイル）設定 */
+.game-thumb-item {
+  display: block;
+  width: 320px;
+  height: 240px;
+  padding: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  border: none;                  /* 枠線を削除 */
+  box-shadow: none;              /* 影を削除 */
+  background: none;
+  cursor: pointer;
+  transition: transform 0.3s ease; /* 上に動くアニメーションのみ設定 */
+}
+
+.game-thumb-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ホバー時の設定 */
+.game-thumb-item:hover {
+  transform: translateY(-5px);   /* 少し上に上がる */
+  box-shadow: none;              /* 影はつけない */
+  border-color: transparent;     /* 枠線の色は変えない */
+}
+
+/*========= モーダル（詳細ポップアップ） ===============*/
+
+.game-modal {
+  display: none; /* 初期状態は非表示 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(15, 23, 42, 0.6); /* 薄暗い背景フィルター */
+  backdrop-filter: blur(4px);              /* 背景のぼかし効果 */
+  z-index: 2000;                            /* 最前面に表示 */
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.game-modal.is-active {
+  display: flex; /* アクティブ時に中央表示 */
+  animation: fadeIn 0.25s ease-out;
+}
+
+/* ポップアップコンテンツカード */
+.game-modal-content {
+  position: relative;
+  background-color: var(--bg-card);
+  width: 100%;
+  max-width: 580px;
+  max-height: 85vh;
+  overflow-y: auto;
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-lg);
+  color: var(--text-main);
+}
+
+/* 閉じるボタン */
+.modal-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--text-main);
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.modal-close-btn:hover {
+  opacity: 1;
+}
+
+/* モーダル内部デザイン */
+.game-modal-content h2 {
+  margin-top: 0;
+  padding-left: 0;
+  border-left: none;
+  font-size: 1.5rem;
+  color: var(--accent-primary);
+}
+
+.modal-img {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  aspect-ratio: 320 / 240;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto 1.5rem;
+  border: 1px solid var(--border-color);
+}
+
+.modal-spec {
+  background-color: var(--bg-main);
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.modal-spec p {
+  margin: 0.3rem 0;
+  font-size: 0.9rem;
+}
+
+.modal-links {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.modal-btn {
+  display: inline-block;
+  padding: 10px 24px;
+  background-color: var(--accent-primary);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 25px;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.modal-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2deg);
+}
+
+/* 表示アニメーション */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/*========= ACCOUNT ===============*/
 .account-title {
   margin-bottom: 0rem;
 }

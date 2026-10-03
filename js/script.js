@@ -52,6 +52,41 @@ $('#page-top').click(function () {
     return false;//リンク自体の無効化
 });
 
+// モーダルを開く
+function openGameModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.classList.add('is-active');
+        document.body.style.overflow = 'hidden'; // 背景のスクロールを固定
+    }
+}
+
+// モーダルを閉じる
+function closeGameModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.classList.remove('is-active');
+        document.body.style.overflow = ''; // スクロール固定を解除
+    }
+}
+
+// 背景部分（モーダル枠外）クリックで閉じる
+function closeGameModalOuter(event, modalId) {
+    if (event.target.id === modalId) {
+        closeGameModal(modalId);
+    }
+}
+
+// ESCキーを押したときにも閉じる
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        const activeModals = document.querySelectorAll('.game-modal.is-active');
+        activeModals.forEach(modal => {
+            closeGameModal(modal.id);
+        });
+    }
+});
+
 /*========= 言語切り替え時のスクロール位置の保存・復元（スマホ対応版） ===============*/
 // 1. ページ読み込み時に復元
 window.addEventListener('DOMContentLoaded', () => {
