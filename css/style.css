@@ -367,6 +367,8 @@ p:last-child {
   border-radius: 12px;
   overflow: hidden;
   background-color: #ffffff;
+  padding: 0;
+  margin: 0;
 }
 
 .google-form-wrapper iframe {
@@ -374,6 +376,7 @@ p:last-child {
   width: 100%;
   height: 1250px; /* フォームの項目数に合わせてスクロールが出ない高さに調整 */
   border: none;
+
 }
 
 /* 右下固定の Page Top ボタン */
