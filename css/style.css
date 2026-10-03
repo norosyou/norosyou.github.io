@@ -310,7 +310,12 @@ p:last-child {
     margin: 2rem 0.5rem;
   }
   .google-form-wrapper iframe {
-    height: 1500px;
+    /* スマホはフォーム全体を85%に縮小 */
+    transform: scale(0.85);
+    transform-origin: top left; /* 左上基準で縮小 */
+    /* 縮小した分、横幅と高さを補正してピッタリ収める */
+    width: 117.6%; /* 100% ÷ 0.85 ≒ 117.6% */
+    height: 1450px; /* 縮小後の高さに合わせて調整 */
   }
 }
 /* アカウントアイコン全体の設定 */
