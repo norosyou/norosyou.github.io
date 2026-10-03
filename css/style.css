@@ -369,7 +369,6 @@ p:last-child {
   position: relative;
   width: 100%;
   max-width: 680px;
-  border-radius: 12px;
   overflow: hidden;
   background-color: #ffffff;
   padding: 0;
