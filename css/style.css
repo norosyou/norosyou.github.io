@@ -26,20 +26,6 @@
   --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.25), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
 }
 
-/*============= スマホ対応 ===============*/
-@media screen and (max-width: 768px) {
-  main{
-    padding: 1%;
-  }
-  section{
-    padding: 1rem 1.2rem;
-    margin: 2rem 0.5rem;
-  }
-.google-form-wrapper iframe {
-    height: 1600px; /* フォームの項目数に合わせてスクロールが出ない高さに調整 */
-  }
-}
- 
 /*============= ナビゲーション ===============*/
 /*アクティブになったエリア*/
 #g-nav.panelactive{
@@ -315,7 +301,21 @@ p:last-child {
   margin-bottom: 2rem;
 }
 
-/*=========゜=== GAME ===============*/
+/*============= スマホ対応 ===============*/
+@media screen and (max-width: 768px) {
+  main{
+    padding: 1%;
+  }
+  section{
+    padding: 1rem 1.2rem;
+    margin: 2rem 0.5rem;
+  }
+.google-form-wrapper iframe {
+    height: 1600px; /* フォームの項目数に合わせてスクロールが出ない高さに調整 */
+  }
+}
+
+/*============ GAME ===============*/
 /* アカウントアイコン全体の設定 */
 .game-title {
   margin-bottom: 2rem;
