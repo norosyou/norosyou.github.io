@@ -303,18 +303,25 @@ p:last-child {
 
 /*============= スマホ対応 ===============*/
 @media screen and (max-width: 768px) {
-  main{
-    padding: 1%;
+  main {
+    /* 左右の最低限の余白を確保 */
+    padding: 0.5rem;
   }
-  section{
-    padding: 1rem 1.2rem;
-    margin: 2rem 0.5rem;
+
+  section {
+    /* スマホでは内側の左右余白を少し抑える */
+    padding: 1.2rem 1rem;
+    /* 左右のマージンを無くして表示幅を広げる */
+    margin: 1.5rem 0;
   }
+
   .google-form-wrapper iframe {
+    width: 100%;
     /* フォームの項目数に合わせてスクロールが出ない高さに調整 */
-    height: 1600px; 
+    height: 1600px;
   }
 }
+
 
 /*============ GAME ===============*/
 /* アカウントアイコン全体の設定 */
