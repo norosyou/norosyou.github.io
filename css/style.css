@@ -354,7 +354,7 @@ p:last-child {
   align-items: center;
 }
 
-/* CONTACTセクションの中央揃え */
+/* CONTACTセクション */
 .contact-title {
   margin-bottom: 1rem;
 }
@@ -362,29 +362,25 @@ p:last-child {
 #contact-text p {
   text-align: center;
 }
-/* ボタンラッパーとボタンの配置調整 */
-.contact-btn-wrapper {
-  display: flex;
-  justify-content: center;
-  margin: 1.5rem;
+
+/*========= CONTACT フォーム埋め込み用CSS ===============*/
+.google-form-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 680px;
+  margin: 1.5rem auto 0;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  background-color: #ffffff;
 }
 
-.contact-btn {
-  display: inline-block;
-  padding: 12px 28px;
-  background-color: var(--text-main, #18181b);
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 30px;
-  transition: all 0.3s ease;
-  box-shadow: var(--shadow-sm);
-}
-
-.contact-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-sm);
-  opacity: 0.9;
+.google-form-wrapper iframe {
+  display: block;
+  width: 100%;
+  min-height: 750px; /* フォームの項目数に合わせてスクロールが出ない高さに調整してください */
+  border: none;
 }
 
 /* 右下固定の Page Top ボタン */
