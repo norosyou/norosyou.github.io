@@ -313,6 +313,7 @@ p:last-child {
     /* 90% に縮小 */
     transform: scale(0.9);
     transform-origin: top center;
+    height: 1350px; /* フォームの項目数に合わせてスクロールが出ない高さに調整 */
   }
 }
 /* アカウントアイコン全体の設定 */
