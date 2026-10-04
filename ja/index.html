@@ -38,65 +38,30 @@
 			<div id="Game"></div>
       		<h1 class="game-title"><i class="fa fa-gamepad"></i> GAME</h1>
       		<!-- <p>Coming Soon!</p> -->
-			<!-- サムネイル縦並びリスト -->
-				<div class="game-thumb-list">
-					
-					<!-- ゲーム1 -->
-					<button type="button" class="game-thumb-item" onclick="openGameModal('modal-game1')">
-						<img src="../resource/320x240.png" alt="ゲーム作品1" width="320" height="240">
-					</button>
+			<!-- サムネイルリスト -->
+			<div class="game-thumb-list">
+				<!-- game1.html を読み込む -->
+				<button type="button" class="game-thumb-item" onclick="openGameModal('game1.html')">
+					<img src="../resource/320x240.png" alt="ゲーム作品1" width="320" height="240">
+				</button>
 
-					<!-- ゲーム2 -->
-					<button type="button" class="game-thumb-item" onclick="openGameModal('modal-game2')">
-						<img src="../resource/320x240.png" alt="ゲーム作品2" width="320" height="240">
-					</button>
-
-				</div>
-			</section>
-
-			<!-- ==================== ゲーム詳細ポップアップ（モーダル） ==================== -->
-
-			<!-- ゲーム1のモーダル -->
-			<div id="modal-game1" class="game-modal" onclick="closeGameModalOuter(event, 'modal-game1')">
-				<div class="game-modal-content">
-					<button type="button" class="modal-close-btn" onclick="closeGameModal('modal-game1')">&times;</button>
-					
-					<h2>タイトル1</h2>
-					<div class="modal-body">
-						<!-- 320x240サムネイルまたはメイン画像 -->
-						<img src="../resource/game1_thumb.png" alt="ゲーム1" class="modal-img">
-						
-						<p>ゲームのストーリーや概要テキストをここに記述します。</p>
-						
-						<div class="modal-spec">
-							<p><strong>プラットフォーム:</strong> PC (Steam)</p>
-							<p><strong>ジャンル:</strong> 2D Pixel Action</p>
-						</div>
-
-						<div class="modal-links">
-							<a href="https://store.steampowered.com/" target="_blank" rel="noopener" class="modal-btn">Steamで見る</a>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<!-- ゲーム2のモーダル -->
-			<div id="modal-game2" class="game-modal" onclick="closeGameModalOuter(event, 'modal-game2')">
-				<div class="game-modal-content">
-					<button type="button" class="modal-close-btn" onclick="closeGameModal('modal-game2')">&times;</button>
-					
-					<h2>タイトル2</h2>
-					<div class="modal-body">
-						<img src="../resource/game2_thumb.png" alt="ゲーム2" class="modal-img">
-						<p>ゲーム2の紹介テキスト。</p>
-						<div class="modal-links">
-							<a href="#" target="_blank" rel="noopener" class="modal-btn">詳細を見る</a>
-						</div>
-					</div>
-				</div>
+				<!-- game2.html を読み込む -->
+				<button type="button" class="game-thumb-item" onclick="openGameModal('game2.html')">
+					<img src="../resource/320x240.png" alt="ゲーム作品2" width="320" height="240">
+				</button>
 			</div>
 		</section>
-			<section>
+		<!-- ==================== 共通モーダル ==================== -->
+		<div id="game-modal" class="game-modal" onclick="closeGameModalOuter(event)">
+			<div class="game-modal-content">
+				<button type="button" class="modal-close-btn" onclick="closeGameModal()">&times;</button>
+				<!-- ここに外部HTMLの内容が動的に読み込まれます -->
+				<div id="modal-dynamic-content">
+					<p>読み込んでいます…</p>
+				</div>
+			</div>
+		</div>
+		<section>
 			<div id="Guidelines"></div>
 			<h1><i class="fa fa-file-text"></i> GUIDELINES</h1>
 			

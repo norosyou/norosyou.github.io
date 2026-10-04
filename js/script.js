@@ -44,6 +44,7 @@ $('#ContactBtn').click(function () {
 	$("html").animate({scrollTop: ContactTop});
 });
 
+/*========= 右下固定の Page Top ボタン ===============*/
 // #page-topをクリックした際の設定
 $('#page-top').click(function () {
     $('body,html').animate({
@@ -52,38 +53,57 @@ $('#page-top').click(function () {
     return false;//リンク自体の無効化
 });
 
-// モーダルを開く
-function openGameModal(modalId) {
-    const modal = document.getElementById(modalId);
-    if (modal) {
-        modal.classList.add('is-active');
-        document.body.style.overflow = 'hidden'; // 背景のスクロールを固定
-    }
+
+/*========= GAME ===============*/
+// 外部HTMLを読み込んでモーダルを開く
+function openGameModal(fileUrl) {
+    const modal = document.getElementById('game-modal');
+    const contentArea = document.getElementById('modal-dynamic-content');
+    
+    if (!modal || !contentArea) return;
+
+    // 読み込み中表示
+    contentArea.innerHTML = '<p style="text-align:center; padding: 2rem;">読み込んでいます…</p>';
+    
+    // アニメーション付きでモーダルを表示
+    modal.classList.add('is-active');
+    document.body.style.overflow = 'hidden';
+
+    // 外部ファイル（game1.htmlなど）を取得して挿入
+    fetch(fileUrl)
+        .then(response => {
+            if (!response.ok) throw new Error('Network response was not ok');
+            return response.text();
+        })
+        .then(html => {
+            contentArea.innerHTML = html;
+        })
+        .catch(error => {
+            console.error('Fetch error:', error);
+            contentArea.innerHTML = '<p style="text-align:center; color: red;">データの読み込みに失敗しました。</p>';
+        });
 }
 
 // モーダルを閉じる
-function closeGameModal(modalId) {
-    const modal = document.getElementById(modalId);
+function closeGameModal() {
+    const modal = document.getElementById('game-modal');
     if (modal) {
         modal.classList.remove('is-active');
-        document.body.style.overflow = ''; // スクロール固定を解除
+        document.body.style.overflow = '';
     }
 }
 
-// 背景部分（モーダル枠外）クリックで閉じる
-function closeGameModalOuter(event, modalId) {
-    if (event.target.id === modalId) {
-        closeGameModal(modalId);
+// 背景クリックで閉じる
+function closeGameModalOuter(event) {
+    if (event.target.id === 'game-modal') {
+        closeGameModal();
     }
 }
 
-// ESCキーを押したときにも閉じる
+// ESCキーで閉じる
 document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') {
-        const activeModals = document.querySelectorAll('.game-modal.is-active');
-        activeModals.forEach(modal => {
-            closeGameModal(modal.id);
-        });
+        closeGameModal();
     }
 });
 
