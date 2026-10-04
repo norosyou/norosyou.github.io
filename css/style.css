@@ -312,6 +312,7 @@ p:last-child {
   align-items: center;
   gap: 1.5rem;
   margin-top: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 /* ボタン（サムネイル）設定 */
@@ -322,8 +323,8 @@ p:last-child {
   padding: 0;
   border-radius: 12px;
   overflow: hidden;
-  border: none;                  /* 枠線を削除 */
-  box-shadow: none;              /* 影を削除 */
+  border: none;
+  box-shadow: var(--shadow-lg);
   background: none;
   cursor: pointer;
   transition: transform 0.3s ease; /* 上に動くアニメーションのみ設定 */
@@ -339,7 +340,6 @@ p:last-child {
 /* ホバー時の設定 */
 .game-thumb-item:hover {
   transform: translateY(-5px);   /* 少し上に上がる */
-  box-shadow: none;              /* 影はつけない */
   border-color: transparent;     /* 枠線の色は変えない */
 }
 
@@ -429,14 +429,13 @@ p:last-child {
   border-radius: 50%;
   text-decoration: none;
   font-size: 0.8rem;
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-lg);
   transition: all 0.3s ease;
 }
 
 #page-top:hover {
   background-color:var(--page-top-hover-bg);
   transform: translateY(-3px);
-  box-shadow: var(--shadow-sm);
 }
 
 /*============= 左上固定の言語切替ボタン ===============*/
@@ -454,7 +453,7 @@ p:last-child {
   padding: 6px 14px;
   border-radius: 20px;
   border: 1px solid var(--border-color);
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-lg);
   font-family: sans-serif;
   font-size: 0.85rem;
   font-weight: bold;
@@ -536,8 +535,116 @@ p:last-child {
 
 /* ホバー時に少し上に上がる */
 .back-btn:hover {
-  transform: translateY(-5px);  /* 少し上に移動 */
+  transform: translateY(-5px);
 }
+
+/*========= GAME DETAIL PAGE ===============*/
+.game-title {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-top: 0rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.game-detail-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+}
+
+/* YouTube動画（16:9 レスポンシブ固定） */
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 の比率 */
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #000;
+  margin-bottom: 2.5rem;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* 外部リンクボタン */
+.game-links {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+}
+
+.link-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.8rem 1.8rem;
+  font-weight: 600;
+  font-size: 2rem;
+  text-decoration: none;
+  color: var(--text-main);
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.link-btn:hover {
+  transform: translateY(-3px);
+  color: var(--accent-primary);
+}
+
+/* ボタン内のSVG画像用スタイル */
+.link-btn .btn-svg-icon {
+  width: 1em;
+  height: 1em;
+  object-fit: contain;
+}
+
+/* 説明テキスト  */
+.game-description {
+  margin-bottom: 1rem;
+}
+
+.game-description p {
+  line-height: 1.8;
+  opacity: 0.9;
+}
+
+/*========= プレスキットエリア ===============*/
+
+.presskit-section h2 {
+  margin-bottom: 1.5rem;
+}
+
+/* 画像風のカプセル型ダウンロードボタン */
+.presskit-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-left: 2rem;
+  padding: 0.8rem 2.2rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #ffffff;
+  background-color: var(--accent-primary);
+  border-radius: 50px;
+  text-decoration: none;
+  border: none;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.presskit-btn:hover {
+  transform: translateY(-3px);
+}
+
 /*============= スマホ対応 ===============*/
 @media screen and (max-width: 768px) {
   main {

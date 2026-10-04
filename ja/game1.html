@@ -27,9 +27,62 @@
     </div>
 	<div class="circle-bg"></div>
 	<main id="main">
-   	<section>
-    </section>
-    </main>
+	<section class="game-detail-section">
+		<h1 class="game-title">GAME TITLE</h1>
+		<!-- YouTube動画 -->
+		<div class="video-container">
+		<!-- YOUR_YOUTUBE_ID の部分をYouTube動画のIDに書き換えてください -->
+		<iframe 
+			src="https://www.youtube-nocookie.com/embed/YOUR_YOUTUBE_ID" 
+			title="Game Trailer" 
+			frameborder="0" 
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+			allowfullscreen>
+		</iframe>
+		</div>
+
+		<!-- ゲームの説明文章 -->
+		<div class="game-description">
+		<h2>ABOUT</h2>
+		<p>
+			ゲームのストーリーやコンセプト、ゲームシステムの特徴などをここに記述します。<br>
+			どんな体験ができる作品なのかを簡潔にまとめて記述すると効果的です。
+		</p>
+		</div>
+
+
+		<!--  外部リンク -->
+		<h2>PLATFORM</h2>
+		<div class="game-links">
+		<!-- Steam -->
+		<a href="https://store.steampowered.com/" target="_blank" rel="noopener noreferrer" class="link-btn primary">
+			<i class="fa-brands fa-steam"></i>
+		</a>
+
+		<a href="https://store.nintendo.com/" target="_blank" rel="noopener noreferrer" class="link-btn">
+		<img src="../resource/nintendoswitch.svg" alt="Switch" class="btn-svg-icon">
+		</a>
+		<!-- PlayStation -->
+		<a href="https://store.playstation.com/" target="_blank" rel="noopener noreferrer" class="link-btn">
+			<i class="fa-brands fa-playstation"></i>
+		</a>
+
+		<!-- itch.io -->
+		<a href="https://itch.io/" target="_blank" rel="noopener noreferrer" class="link-btn">
+			<i class="fa-brands fa-itch-io"></i>
+		</a>
+		</div>
+	
+		<!-- プレスキットエリア -->
+		<div class="presskit-section">
+		<h2>PRESS KIT</h2>
+		<a href="../resource/presskit.zip" download class="presskit-btn">
+			<i class="fa-solid fa-download"></i> DOWNLOAD
+		</a>
+		</div>
+	</section>
+
+	</main>
 	<a id="page-top" href="#"><i class="fa fa-arrow-up"></i></a>
 	<footer id="footer">
 		<small>&copy;norosyou</small>
