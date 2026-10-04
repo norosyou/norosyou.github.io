@@ -600,6 +600,7 @@ p:last-child {
 
 /* 説明テキスト  */
 .game-description {
+  margin-top: 0rem;
   margin-bottom: 1rem;
 }
 
