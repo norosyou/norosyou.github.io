@@ -1,15 +1,40 @@
-<!-- game1.html -->
-<h2>ゲームタイトル1</h2>
-<div class="modal-body">
-    <img src="../resource/320x240.png" alt="ゲーム1" class="modal-img">
-    <p>ここがゲーム1の詳細テキストです。別ファイルで管理できます。</p>
-    
-    <div class="modal-spec">
-        <p><strong>プラットフォーム:</strong> PC (Steam)</p>
-        <p><strong>ジャンル:</strong> 2D Action</p>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>norosyou - game1</title>
+	<meta name="description"  content="game1">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>	
+    <body>
+	<canvas id="bg-canvas"></canvas>
+	<!-- 左上固定またはヘッダー左側に配置する言語切替ボタン -->
+    <div class="lang-switch-container">
+        <a href="../ja/game1.html?noredirect=true" class="lang-switch-btn active">JA</a>
+        <span class="lang-switch-divider">/</span>
+        <a href="../en/game1.html?noredirect=true" class="lang-switch-btn">EN</a>
+        <span class="lang-switch-divider">/</span>
+        <a href="../zh-CN/game1.html?noredirect=true" class="lang-switch-btn">CN</a>
+    </div>	
+	<header id="header"></header>
+    <!-- 右上固定の BACK ボタン -->
+    <div class="back-btn-container">
+        <a href="index.html" class="back-btn">
+            <i class="fa-solid fa-arrow-left"></i> BACK
+        </a>
     </div>
-
-    <div class="modal-links">
-        <a href="https://store.steampowered.com/" target="_blank" rel="noopener" class="modal-btn">Steamで見る</a>
-    </div>
-</div>
+	<div class="circle-bg"></div>
+	<main id="main">
+   	<section>
+    </section>
+    </main>
+	<a id="page-top" href="#"><i class="fa fa-arrow-up"></i></a>
+	<footer id="footer">
+		<small>&copy;norosyou</small>
+	</footer>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="  crossorigin="anonymous"></script>
+	<script src="../js/script.js"></script>
+</body>
+</html>

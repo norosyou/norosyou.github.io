@@ -40,27 +40,12 @@
       		<!-- <p>Coming Soon!</p> -->
 			<!-- サムネイルリスト -->
 			<div class="game-thumb-list">
-				<!-- game1.html を読み込む -->
-				<button type="button" class="game-thumb-item" onclick="openGameModal('game1.html')">
+				<!-- ゲーム1：別ページへ遷移 -->
+				<a href="game1.html" class="game-thumb-item">
 					<img src="../resource/320x240.png" alt="ゲーム作品1" width="320" height="240">
-				</button>
-
-				<!-- game2.html を読み込む -->
-				<button type="button" class="game-thumb-item" onclick="openGameModal('game2.html')">
-					<img src="../resource/320x240.png" alt="ゲーム作品2" width="320" height="240">
-				</button>
+				</a>
 			</div>
 		</section>
-		<!-- ==================== 共通モーダル ==================== -->
-		<div id="game-modal" class="game-modal" onclick="closeGameModalOuter(event)">
-			<div class="game-modal-content">
-				<button type="button" class="modal-close-btn" onclick="closeGameModal()">&times;</button>
-				<!-- ここに外部HTMLの内容が動的に読み込まれます -->
-				<div id="modal-dynamic-content">
-					<p>読み込んでいます…</p>
-				</div>
-			</div>
-		</div>
 		<section>
 			<div id="Guidelines"></div>
 			<h1><i class="fa fa-file-text"></i> GUIDELINES</h1>
@@ -135,8 +120,5 @@
 	</footer>
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="  crossorigin="anonymous"></script>
 	<script src="../js/script.js"></script>
-</body>
-
-
 </body>
 </html>
