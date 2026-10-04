@@ -318,7 +318,7 @@ p:last-child {
   .google-form-wrapper iframe {
     width: 100%;
     /* フォームの項目数に合わせてスクロールが出ない高さに調整 */
-    height: 1700px;
+    height: 2000px;
   }
 }
 
