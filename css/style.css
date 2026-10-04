@@ -506,7 +506,7 @@ p:last-child {
 /*========= 右上固定コンテナ ===============*/
 .back-btn-container {
   position: fixed;
-  top: 10px;
+  top: 15px;
   right: 20px;
   z-index: 1000;
 }
