@@ -548,12 +548,6 @@ p:last-child {
   text-align: center;
 }
 
-.game-detail-section {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem 1rem 4rem;
-}
-
 /* YouTube動画（16:9 レスポンシブ固定） */
 .video-container {
   position: relative;
