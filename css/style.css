@@ -601,13 +601,7 @@ p:last-child {
 /* 説明テキスト  */
 .game-description {
   margin-top: 0rem;
-  margin-bottom: 1rem;
-}
-
-.game-description p {
-  line-height: 1.8;
-  opacity: 0.9;
-  margin: 1rem 0rem;
+  margin-bottom: 2rem;
 }
 
 /*========= プレスキットエリア ===============*/
