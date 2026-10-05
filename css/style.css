@@ -607,7 +607,7 @@ p:last-child {
 .game-description p {
   line-height: 1.8;
   opacity: 0.9;
-  margin: 0rem;
+  margin: 1rem 0rem;
 }
 
 /*========= プレスキットエリア ===============*/
