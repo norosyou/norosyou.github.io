@@ -106,8 +106,8 @@ window.addEventListener('DOMContentLoaded', () => {
   // ==========================================
   const CONFIG = {
     count: 35,          // 玉の数
-    minRadius: 20,       // 最小のサイズ (px)
-    maxRadius: 60,      // 最大のサイズ (px)
+    minRadius: 30,       // 最小のサイズ (px)
+    maxRadius: 70,      // 最大のサイズ (px)
     speed: 0.2,         // 動くスピード
     opacity: 0.3       // 透明度（0.0〜1.0）
   };
